@@ -1,10 +1,10 @@
 package com.skilldistillery.foodtruck.entities;
 
 public class FoodTruck {
-	private static int currentTruckId;
+	private static int currentTruckId = 1;
 	private String name;
 	private String foodType;
-	private int truckId;
+	private int truckId = 0;
 	private int rating;
 	
 
@@ -14,12 +14,12 @@ public class FoodTruck {
 	
 	// get & set, constructor,
 
-	public int getNextTruckId() {
+	public int getcurrentTruckId() {
 		return currentTruckId;
 	}
 
-	public void setNextTruckId(int nextTruckId) {
-		FoodTruck.currentTruckId = nextTruckId;
+	public void setcurrentTruckId(int currentTruckId) {
+		FoodTruck.currentTruckId = currentTruckId;
 	}
 
 	public String getName() {
@@ -57,13 +57,24 @@ public class FoodTruck {
 	public FoodTruck(String name, String foodType, int truckId, int rating) {
 		this.name = name;
 		this.foodType = foodType;
-		this.truckId = truckId;
+		this.truckId = currentTruckId ++;
 		this.rating = rating;
 	}
 	//sysout..
 	public String toString() {
-		return "**Truck Name: " + name + "- ID:" + truckId + ", serving: " + foodType + ". Rating: " + rating + "**"; 
+		return "Truck Name: " + name + "- ID:" + truckId + ". Serving: " + foodType + ". Rating: " + rating ; 
 	}
-	
+	public int id() {
+		truckId++;
+		return truckId;
+	}
+
+	public int getId() {
+		return truckId;
+	}
+
+	public void setId(int id) {
+		this.truckId = id;
+	}
 	
 }
