@@ -44,7 +44,7 @@ public class FoodTruckApp {
 			FoodTruck tr = new FoodTruck(name, foodType, rating, rating);
 			foodtruck[i] = tr;
 		}
-	}
+	
 	int choice;
 	do {
 		menu();
@@ -57,23 +57,49 @@ public class FoodTruckApp {
 			default:
 				System.out.println("Invalid input!");
 		}
-		
+		}while (choice != 4);
 	}
-	/*
-	 * choice show menu() 4 case swithc loop while != 4
+
+	public void menu() {
+		fifteenStars();
+		System.out.print("MENU");
+		fifteenStars();
+	    thirtyStars();
+	    System.out.println("\t Press 1 for list of entered food trucks");
+	    thirtyStars();
+	    System.out.println("\t Press 2 for your rating average");
+	    thirtyStars();
+	    System.out.println("\t Press 3 for the Highest rating Truck");
+	    thirtyStars();
+	    System.out.println("\t Press 4 to Quit");
+	    thirtyStars();
+	}
+	
+
+	public void existingTruck() {
+	  for(FoodTruck tr: foodtruck) {
+		  if (tr != null) {
+			  System.out.println(tr);
+			  
+		  }
+	  }
+	}
+
+	public void averageRating()
 	 * 
-	 * 
-	 * 
-	 * create void menu()
-	 * 
-	 * create void existingTruck()
-	 * 
-	 * create void averageRating()
-	 * 
-	 * create void highestRating()s
+	 * create
+
+	void highestRating()s
 	 * 
 	 * 
 	 * 
 	 */
-
+	public void fifteenStars() {
+		System.out.print("***************"); 
+		 
+}
+	 public void thirtyStars() {
+		 System.out.println("*********************************************"); 
+		 
+	 }
 }
