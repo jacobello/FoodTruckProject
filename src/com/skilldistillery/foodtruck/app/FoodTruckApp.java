@@ -12,15 +12,10 @@ public class FoodTruckApp {
 		FoodTruckApp app = new FoodTruckApp();
 		System.out.println("*************  Welcome  *************");
 		app.op();
-//	not ID();
 	}
 
-//	fleet of up to 5 truck,
 	FoodTruck[] foodtruck = new FoodTruck[5];
 
-	/*
-	 * create op(); for loop: ask for input of name, ftype,rating "quit" break;
-	 */
 	public void op() {
 
 		for (int i = 0; i < foodtruck.length; i++) {
@@ -89,7 +84,6 @@ public class FoodTruckApp {
 			if (tr != null) {
 				System.out.println(tr);
 			}
-
 		}
 	}
 
@@ -110,28 +104,6 @@ public class FoodTruckApp {
 		thirtyStars();
 	}
 
-//	public void highestRating() {
-//		int i;
-//	
-//		for (i = 5; i > 0; i--) {
-//			if (foodtruck[i] == null) {
-//			break;
-//		}
-//			if ( foodtruck[i].getRating() == i) {
-//				System.out.println("The highest rating is " + foodtruck[i].toString());
-//				break;
-//			}	
-//			if (foodtruck[i].getRating() < i) {
-//				highRating -= 1;
-//			}
-//			if (foodtruck[i].getRating() > highRating) {
-//				highRating = foodtruck[i].getRating();
-//			}
-//				
-//			}
-//			
-//		}
-//	
 	public void highestRating() {
 		int i = 0;
 		FoodTruck highRating = new FoodTruck();
@@ -139,24 +111,18 @@ public class FoodTruckApp {
 			if (foodtruck[i] == null) {
 				break;
 			}
-//			if (foodtruck[i].getRating() < highRating) {
-//				continue;
-//			}
 			if (foodtruck[i].getRating() > highRating.getRating()) {
 				highRating = foodtruck[i];
 			}
-//			if (foodtruck[i].getRating() == highRating) {
 		}
 		System.out.println("The highest rating is " + highRating.toString());
 	}
 
 	public void fifteenStars() {
 		System.out.print("***************");
-
 	}
 
 	public void thirtyStars() {
 		System.out.println("*********************************************");
-
 	}
 }
