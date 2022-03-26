@@ -10,7 +10,7 @@ public class FoodTruckApp {
 	public static void main(String[] args) {
 
 		FoodTruckApp app = new FoodTruckApp();
-		System.out.println("*** Welcome ***");
+		System.out.println("************* Welcome *************");
 		app.op();
 //	not ID();
 	}
@@ -24,7 +24,7 @@ public class FoodTruckApp {
 	public void op() {
 
 		for (int i = 0; i < foodtruck.length; i++) {
-			System.out.println("Enter name of the food truck you would like to rate! Enter \"Quit\" to Menu");
+			System.out.println("Enter name of the food truck you would like to rate! \nEnter \"Quit\" to Menu");
 			String name = sc.next();
 			sc.nextLine();
 
@@ -51,8 +51,8 @@ public class FoodTruckApp {
 		choice = sc.nextInt();
 		switch(choice) {
 		case 1: existingTruck(); 
-		case 2:	averageRating()
-		case 3: highestRating()
+		case 2:	averageRating();
+		case 3: highestRating();
 		case 4:	System.out.println("Good Bye! U+1F600 ");
 			default:
 				System.out.println("Invalid input!");
@@ -62,10 +62,9 @@ public class FoodTruckApp {
 
 	public void menu() {
 		fifteenStars();
-		System.out.print("MENU");
+		System.out.print("     MENU     ");
 		fifteenStars();
-	    thirtyStars();
-	    System.out.println("\t Press 1 for list of entered food trucks");
+	    System.out.println("\n\t Press 1 for list of entered trucks");
 	    thirtyStars();
 	    System.out.println("\t Press 2 for your rating average");
 	    thirtyStars();
@@ -85,15 +84,30 @@ public class FoodTruckApp {
 	  }
 	}
 
-	public void averageRating()
-	 * 
-	 * create
-
-	void highestRating()s
-	 * 
-	 * 
-	 * 
-	 */
+	public void averageRating() {
+		double average = 0.0;
+		double sum = 0.0;
+		int i = 0;
+		
+		for(i = 0; i < foodtruck.length ; i++) {
+			int rating2 = foodtruck[i].getRating();
+			sum = sum + rating2;
+		}
+		average = sum / i;
+		System.out.println("The average rating is: " + average);
+		thirtyStars();
+	}
+	int highRating = 0;
+	public void highestRating() {
+		for (int i = 0; i < foodtruck.length; i++) {
+			if(foodtruck[i].getRating() > highRating) {
+				highRating = foodtruck[i].getRating();
+			if(highRating == foodtruck[i].getRating())	{
+				System.out.println("The highest rating is " + foodtruck[i].getRating());
+			}
+			}
+		}
+	}
 	public void fifteenStars() {
 		System.out.print("***************"); 
 		 

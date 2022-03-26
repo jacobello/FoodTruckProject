@@ -6,11 +6,12 @@ public class FoodTruck {
 	private String foodType;
 	private int truckId;
 	private int rating;
+	
 
 	public FoodTruck() {
-
+		
 	}
-
+	
 	// get & set, constructor,
 
 	public int getNextTruckId() {
@@ -52,18 +53,17 @@ public class FoodTruck {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-
-	// create new Truck
+	//create new Truck
 	public FoodTruck(String name, String foodType, int truckId, int rating) {
 		this.name = name;
 		this.foodType = foodType;
 		this.truckId = truckId;
 		this.rating = rating;
 	}
-
-	// sysout..
+	//sysout..
 	public String toString() {
-		return "**Truck Name: " + name + "- ID:" + truckId + ", serving: " + foodType + ". Rating: " + rating + "**";
+		return "**Truck Name: " + name + "- ID:" + truckId + ", serving: " + foodType + ". Rating: " + rating + "**"; 
 	}
-
+	
+	
 }
