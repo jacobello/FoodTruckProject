@@ -60,7 +60,7 @@ public class FoodTruck {
 		this.truckId = currentTruckId ++;
 		this.rating = rating;
 	}
-	//sysout..
+	//sysout..toString
 	public String toString() {
 		return "Truck Name: " + name + "- ID:" + truckId + ". Serving: " + foodType + ". Rating: " + rating ; 
 	}
